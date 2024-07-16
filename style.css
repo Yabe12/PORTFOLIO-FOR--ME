@@ -113,6 +113,13 @@ button span {
   border-bottom: 3px solid transparent;
 }
 
+.menu li {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
 button .icon {
   display: none;
 }
@@ -177,12 +184,12 @@ button:hover .text {
 
 @keyframes fade {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0px);
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -192,13 +199,13 @@ button:hover .text {
 
 @keyframes holder {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   95% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
@@ -210,17 +217,27 @@ button:hover .text {
 /* Media Queries for responsive design */
 @media (max-width: 768px) {
   .menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--bg-color);
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-color);
   }
 
   .menu.active {
-      display: flex;
+    display: flex;
   }
 
   .menu-btn {
-      display: block;
+    display: block;
+  }
+
+  .menu li {
+    margin: 1rem 0;
+  }
+
+  .menu a {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
   }
 }
